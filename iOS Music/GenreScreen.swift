@@ -9,10 +9,12 @@
 import UIKit
 import MediaPlayer
 
+
 class GenreScreen: UIViewController {
 
     // Music Controller
     var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
+    
     
     // Items
     @IBOutlet weak var albumCoverImage: UIImageView!
@@ -30,6 +32,10 @@ class GenreScreen: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+       currentSongTime.text = "\(musicPlayer.currentPlaybackTime)"
+        remainingSongTime.text = "\(musicPlayer.currentPlaybackRate)"
+        songNameLabel.text = musicPlayer.nowPlayingItem?.title ?? "Song Name"
+        artistAndAlbumLabel.text = "\(musicPlayer.nowPlayingItem?.albumArtist ?? "Artist Name") - \(musicPlayer.nowPlayingItem?.albumTitle ?? "Album Name")"
                 
     }
     
@@ -47,10 +53,25 @@ class GenreScreen: UIViewController {
         musicPlayer.skipToPreviousItem()
     }
     
+    @IBAction func changeVolume(_ sender: UISlider) {
+        MPVolumeView.setVolume(volumeSlider.value)
+        print(volumeSlider.value)
+    }
     
     
     
     
     
 
+}
+
+extension MPVolumeView {
+    static func setVolume(_ volume: Float) {
+        let volumeView = MPVolumeView()
+        let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
+            slider?.value = volume
+        }
+    }
 }
