@@ -37,7 +37,7 @@ class GenreScreen: UIViewController {
         remainingSongTime.text = "\(musicPlayer.currentPlaybackRate)"
         songNameLabel.text = musicPlayer.nowPlayingItem?.title ?? "Song Name"
         artistAndAlbumLabel.text = "\(musicPlayer.nowPlayingItem?.albumArtist ?? "Artist Name") - \(musicPlayer.nowPlayingItem?.albumTitle ?? "Album Name")"
-        albumCoverImage.image? = ((musicPlayer.nowPlayingItem?.artwork?.image(at: size))!)
+        albumCoverImage.image = musicPlayer.nowPlayingItem?.artwork?.image(at: size)
                 
     }
     
@@ -56,18 +56,19 @@ class GenreScreen: UIViewController {
         musicPlayer.play()
         songNameLabel.text = musicPlayer.nowPlayingItem?.title ?? "Song Name"
         artistAndAlbumLabel.text = "\(musicPlayer.nowPlayingItem?.albumArtist ?? "Artist Name") - \(musicPlayer.nowPlayingItem?.albumTitle ?? "Album Name")"
+        albumCoverImage.image = musicPlayer.nowPlayingItem?.artwork?.image(at: size)
         
     }
     
     @IBAction func backButton(_ sender: UIButton) {
         musicPlayer.stop()
-         musicPlayer.prepareToPlay()
         musicPlayer.skipToPreviousItem()
         musicPlayer.play()
-        songNameLabel.text = musicPlayer.nowPlayingItem?.title ?? "Song Name"
-        artistAndAlbumLabel.text = "\(musicPlayer.nowPlayingItem?.albumArtist ?? "Artist Name") - \(musicPlayer.nowPlayingItem?.albumTitle ?? "Album Name")"
-        
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.songNameLabel.text = self.musicPlayer.nowPlayingItem?.title ?? "Song Name"
+            self.artistAndAlbumLabel.text = "\(self.musicPlayer.nowPlayingItem?.albumArtist ?? "Artist Name") - \(self.musicPlayer.nowPlayingItem?.albumTitle ?? "Album Name")"
+            self.albumCoverImage.image = self.musicPlayer.nowPlayingItem?.artwork?.image(at: self.size)
+        }
         
     }
     
