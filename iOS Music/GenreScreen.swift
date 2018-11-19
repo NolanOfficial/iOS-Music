@@ -25,6 +25,7 @@ class GenreScreen: UIViewController {
     @IBOutlet weak var artistAndAlbumLabel: UILabel!
     @IBOutlet weak var volumeSlider: UISlider!
     
+    let size = CGSize(width: 343, height: 307)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +37,12 @@ class GenreScreen: UIViewController {
         remainingSongTime.text = "\(musicPlayer.currentPlaybackRate)"
         songNameLabel.text = musicPlayer.nowPlayingItem?.title ?? "Song Name"
         artistAndAlbumLabel.text = "\(musicPlayer.nowPlayingItem?.albumArtist ?? "Artist Name") - \(musicPlayer.nowPlayingItem?.albumTitle ?? "Album Name")"
+        albumCoverImage.image? = ((musicPlayer.nowPlayingItem?.artwork?.image(at: size))!)
                 
     }
     
     @IBAction func playButton(_ sender: UIButton) {
+        
         musicPlayer.play()
     }
     
@@ -47,21 +50,31 @@ class GenreScreen: UIViewController {
         musicPlayer.pause()
     }
     @IBAction func nextButton(_ sender: UIButton) {
+        musicPlayer.stop()
+        musicPlayer.prepareToPlay()
         musicPlayer.skipToNextItem()
+        musicPlayer.play()
+        songNameLabel.text = musicPlayer.nowPlayingItem?.title ?? "Song Name"
+        artistAndAlbumLabel.text = "\(musicPlayer.nowPlayingItem?.albumArtist ?? "Artist Name") - \(musicPlayer.nowPlayingItem?.albumTitle ?? "Album Name")"
+        
     }
+    
     @IBAction func backButton(_ sender: UIButton) {
+        musicPlayer.stop()
+         musicPlayer.prepareToPlay()
         musicPlayer.skipToPreviousItem()
+        musicPlayer.play()
+        songNameLabel.text = musicPlayer.nowPlayingItem?.title ?? "Song Name"
+        artistAndAlbumLabel.text = "\(musicPlayer.nowPlayingItem?.albumArtist ?? "Artist Name") - \(musicPlayer.nowPlayingItem?.albumTitle ?? "Album Name")"
+        
+        
+        
     }
     
     @IBAction func changeVolume(_ sender: UISlider) {
         MPVolumeView.setVolume(volumeSlider.value)
         print(volumeSlider.value)
     }
-    
-    
-    
-    
-    
 
 }
 
