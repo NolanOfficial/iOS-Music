@@ -11,34 +11,35 @@ import MediaPlayer
 
 class GenreScreen: UIViewController {
 
+    // Music Controller
     var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
+    
+    // Items
+    @IBOutlet weak var albumCoverImage: UIImageView!
+    @IBOutlet weak var timeOfSong: UISlider!
+    @IBOutlet weak var currentSongTime: UILabel!
+    @IBOutlet weak var remainingSongTime: UILabel!
+    @IBOutlet weak var songNameLabel: UILabel!
+    @IBOutlet weak var artistAndAlbumLabel: UILabel!
+    @IBOutlet weak var volumeSlider: UISlider!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func playMusic(_ sender: UIButton) {
-        MPMediaLibrary.requestAuthorization { (status) in
-            if status == .authorized {
-                 DispatchQueue.main.async {
-                self.playMusic(genre: sender.currentTitle!)
-                }
-            }
-        }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+                
     }
-    
     
     @IBAction func playButton(_ sender: UIButton) {
         musicPlayer.play()
     }
-    @IBAction func stopButton(_ sender: UIButton) {
-        musicPlayer.stop()
-    }
     
+    @IBAction func pauseButton(_ sender: Any) {
+        musicPlayer.pause()
+    }
     @IBAction func nextButton(_ sender: UIButton) {
         musicPlayer.skipToNextItem()
     }
@@ -46,20 +47,7 @@ class GenreScreen: UIViewController {
         musicPlayer.skipToPreviousItem()
     }
     
-    func playMusic(genre: String) {
-        
-        musicPlayer.stop()
-        let query = MPMediaQuery()
-        let predicate = MPMediaPropertyPredicate(value: genre, forProperty: MPMediaItemPropertyGenre)
-        
-        query.addFilterPredicate(predicate)
-        
-        musicPlayer.setQueue(with: query)
-        musicPlayer.shuffleMode = .songs
-        musicPlayer.play()
-        
-        
-    }
+    
     
     
     
