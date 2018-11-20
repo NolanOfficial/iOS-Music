@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		6A7354C421A2027C00ED2186 /* 3745.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A7354C321A2027C00ED2186 /* 3745.png */; };
 		6A7354C621A2028200ED2186 /* no-audio.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A7354C521A2028200ED2186 /* no-audio.png */; };
-		6A7354C821A208AA00ED2186 /* play-button-icon-93570.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A7354C721A208AA00ED2186 /* play-button-icon-93570.png */; };
+		6A7354C821A208AA00ED2186 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A7354C721A208AA00ED2186 /* play.png */; };
 		6A7354CA21A2095500ED2186 /* fast_forward-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A7354C921A2095500ED2186 /* fast_forward-512.png */; };
 		6A7354CC21A209DC00ED2186 /* icons_next-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A7354CB21A209DB00ED2186 /* icons_next-512.png */; };
 		6A7354CE21A20B0B00ED2186 /* backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A7354CD21A20B0A00ED2186 /* backbutton.png */; };
+		6A91069C21A4A20D00685DB2 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A91069B21A4A20D00685DB2 /* pause.png */; };
 		6AA7CBDE219B43AC00CAF727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7CBDD219B43AC00CAF727 /* AppDelegate.swift */; };
 		6AA7CBE0219B43AC00CAF727 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7CBDF219B43AC00CAF727 /* ViewController.swift */; };
 		6AA7CBE3219B43AC00CAF727 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA7CBE1219B43AC00CAF727 /* Main.storyboard */; };
@@ -25,10 +26,11 @@
 /* Begin PBXFileReference section */
 		6A7354C321A2027C00ED2186 /* 3745.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3745.png; sourceTree = "<group>"; };
 		6A7354C521A2028200ED2186 /* no-audio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no-audio.png"; sourceTree = "<group>"; };
-		6A7354C721A208AA00ED2186 /* play-button-icon-93570.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-button-icon-93570.png"; sourceTree = "<group>"; };
+		6A7354C721A208AA00ED2186 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		6A7354C921A2095500ED2186 /* fast_forward-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fast_forward-512.png"; sourceTree = "<group>"; };
 		6A7354CB21A209DB00ED2186 /* icons_next-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons_next-512.png"; sourceTree = "<group>"; };
 		6A7354CD21A20B0A00ED2186 /* backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbutton.png; sourceTree = "<group>"; };
+		6A91069B21A4A20D00685DB2 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		6AA7CBDA219B43AC00CAF727 /* iOS Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA7CBDD219B43AC00CAF727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AA7CBDF219B43AC00CAF727 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,10 +57,11 @@
 			isa = PBXGroup;
 			children = (
 				6A7354C321A2027C00ED2186 /* 3745.png */,
-				6A7354C721A208AA00ED2186 /* play-button-icon-93570.png */,
+				6A7354C721A208AA00ED2186 /* play.png */,
 				6A7354C921A2095500ED2186 /* fast_forward-512.png */,
 				6A7354CB21A209DB00ED2186 /* icons_next-512.png */,
 				6A7354CD21A20B0A00ED2186 /* backbutton.png */,
+				6A91069B21A4A20D00685DB2 /* pause.png */,
 				6A7354C521A2028200ED2186 /* no-audio.png */,
 			);
 			path = Photos;
@@ -155,7 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AA7CBEB219B43AE00CAF727 /* LaunchScreen.storyboard in Resources */,
-				6A7354C821A208AA00ED2186 /* play-button-icon-93570.png in Resources */,
+				6A7354C821A208AA00ED2186 /* play.png in Resources */,
+				6A91069C21A4A20D00685DB2 /* pause.png in Resources */,
 				6AA7CBE8219B43AE00CAF727 /* Assets.xcassets in Resources */,
 				6A7354CA21A2095500ED2186 /* fast_forward-512.png in Resources */,
 				6A7354CC21A209DC00ED2186 /* icons_next-512.png in Resources */,

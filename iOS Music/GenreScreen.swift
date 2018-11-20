@@ -16,6 +16,7 @@ class GenreScreen: UIViewController {
     
     
     // Items
+    @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var albumCoverImage: UIImageView!
     @IBOutlet weak var timeOfSong: UISlider!
     @IBOutlet weak var currentSongTime: UILabel!
@@ -25,6 +26,7 @@ class GenreScreen: UIViewController {
     @IBOutlet weak var volumeSlider: UISlider!
     
     let size = CGSize(width: 300, height: 300)
+    var toggleState = 1
     
     
     override func viewDidLoad() {
@@ -33,18 +35,25 @@ class GenreScreen: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("\(musicPlayer.currentPlaybackTime)")
-        print("\(musicPlayer.currentPlaybackRate)")
+        timeOfSong.maximumValue = Float(musicPlayer.nowPlayingItem?.playbackDuration ?? 0.0)
+        print(timeOfSong.maximumValue)
         changeLabels()
     }
     
     @IBAction func playButton(_ sender: UIButton) {
-        musicPlayer.play()
+        var playBtn = sender as UIButton
+        if toggleState == 1 {
+            musicPlayer.play()
+            toggleState = 2
+            playBtn.setImage(UIImage(named: "pause.png"), for: .normal)
+        } else {
+            musicPlayer.pause()
+            toggleState = 1
+            playBtn.setImage(UIImage(named: "play.png"), for: .normal)
+        }
+        
     }
     
-    @IBAction func pauseButton(_ sender: Any) {
-        musicPlayer.pause()
-    }
     
     @IBAction func nextButton(_ sender: UIButton) {
         musicPlayer.stop()
@@ -57,7 +66,6 @@ class GenreScreen: UIViewController {
     }
     
     @IBAction func backButton(_ sender: UIButton) {
-        
         musicPlayer.stop()
         musicPlayer.skipToPreviousItem()
         musicPlayer.play()
@@ -66,6 +74,7 @@ class GenreScreen: UIViewController {
         }
     }
     
+    // Changing the volume with slider
     @IBAction func changeVolume(_ sender: UISlider) {
     MPVolumeView.setVolume(volumeSlider.value)
         print(volumeSlider.value)
