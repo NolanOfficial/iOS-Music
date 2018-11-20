@@ -54,7 +54,6 @@ class GenreScreen: UIViewController {
         
     }
     
-    
     @IBAction func nextButton(_ sender: UIButton) {
         musicPlayer.stop()
         musicPlayer.prepareToPlay()
