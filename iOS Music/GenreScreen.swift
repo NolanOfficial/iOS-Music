@@ -9,7 +9,6 @@
 import UIKit
 import MediaPlayer
 
-
 class GenreScreen: UIViewController {
 
     // Music Controller
@@ -25,7 +24,8 @@ class GenreScreen: UIViewController {
     @IBOutlet weak var artistAndAlbumLabel: UILabel!
     @IBOutlet weak var volumeSlider: UISlider!
     
-    let size = CGSize(width: 343, height: 307)
+    let size = CGSize(width: 300, height: 300)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,48 +33,57 @@ class GenreScreen: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-       currentSongTime.text = "\(musicPlayer.currentPlaybackTime)"
-        remainingSongTime.text = "\(musicPlayer.currentPlaybackRate)"
-        songNameLabel.text = musicPlayer.nowPlayingItem?.title ?? "Song Name"
-        artistAndAlbumLabel.text = "\(musicPlayer.nowPlayingItem?.albumArtist ?? "Artist Name") - \(musicPlayer.nowPlayingItem?.albumTitle ?? "Album Name")"
-        albumCoverImage.image = musicPlayer.nowPlayingItem?.artwork?.image(at: size)
-                
+        print("\(musicPlayer.currentPlaybackTime)")
+        print("\(musicPlayer.currentPlaybackRate)")
+        changeLabels()
     }
     
     @IBAction func playButton(_ sender: UIButton) {
-        
         musicPlayer.play()
     }
     
     @IBAction func pauseButton(_ sender: Any) {
         musicPlayer.pause()
     }
+    
     @IBAction func nextButton(_ sender: UIButton) {
         musicPlayer.stop()
         musicPlayer.prepareToPlay()
         musicPlayer.skipToNextItem()
         musicPlayer.play()
-        songNameLabel.text = musicPlayer.nowPlayingItem?.title ?? "Song Name"
-        artistAndAlbumLabel.text = "\(musicPlayer.nowPlayingItem?.albumArtist ?? "Artist Name") - \(musicPlayer.nowPlayingItem?.albumTitle ?? "Album Name")"
-        albumCoverImage.image = musicPlayer.nowPlayingItem?.artwork?.image(at: size)
         
+        //Changing Variables
+       changeLabels()
     }
     
     @IBAction func backButton(_ sender: UIButton) {
+        
         musicPlayer.stop()
         musicPlayer.skipToPreviousItem()
         musicPlayer.play()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.songNameLabel.text = self.musicPlayer.nowPlayingItem?.title ?? "Song Name"
-            self.artistAndAlbumLabel.text = "\(self.musicPlayer.nowPlayingItem?.albumArtist ?? "Artist Name") - \(self.musicPlayer.nowPlayingItem?.albumTitle ?? "Album Name")"
-            self.albumCoverImage.image = self.musicPlayer.nowPlayingItem?.artwork?.image(at: self.size)
+        self.changeLabels()
         }
-        
     }
     
     @IBAction func changeVolume(_ sender: UISlider) {
-        MPVolumeView.setVolume(volumeSlider.value)
+    MPVolumeView.setVolume(volumeSlider.value)
         print(volumeSlider.value)
+    }
+    
+    // Changing label values to current song
+    func changeLabels() {
+        let timeRemaining: Int = Int((musicPlayer.nowPlayingItem?.playbackDuration ?? 0)/60)
+        let timeRemainingSeconds: Int = Int(musicPlayer.nowPlayingItem?.playbackDuration ?? 0) % 60
+        if timeRemainingSeconds < 10 {
+            remainingSongTime.text = "\(timeRemaining):0\(timeRemainingSeconds)"
+        } else {
+            remainingSongTime.text = "\(timeRemaining):\(timeRemainingSeconds)"
+        }
+        songNameLabel.text = musicPlayer.nowPlayingItem?.title ?? "Song Name"
+        artistAndAlbumLabel.text = "\(musicPlayer.nowPlayingItem?.albumArtist ?? "Artist Name") - \(musicPlayer.nowPlayingItem?.albumTitle ?? "Album Name")"
+        albumCoverImage.image = musicPlayer.nowPlayingItem?.artwork?.image(at: size)
+        
     }
 
 }
@@ -83,7 +92,6 @@ extension MPVolumeView {
     static func setVolume(_ volume: Float) {
         let volumeView = MPVolumeView()
         let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
-        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
             slider?.value = volume
         }
