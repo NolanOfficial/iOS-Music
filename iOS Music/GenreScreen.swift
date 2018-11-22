@@ -31,25 +31,28 @@ class GenreScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playButton.setImage(UIImage(named: "play.png"), for: .normal)
+        toggleState = 2
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        changePlayButton()
         timeOfSong.maximumValue = Float(musicPlayer.nowPlayingItem?.playbackDuration ?? 0.0)
         print(timeOfSong.maximumValue)
         changeLabels()
+        
     }
     
     @IBAction func playButton(_ sender: UIButton) {
-        var playBtn = sender as UIButton
         if toggleState == 1 {
             musicPlayer.play()
             toggleState = 2
-            playBtn.setImage(UIImage(named: "pause.png"), for: .normal)
+            playButton.setImage(UIImage(named: "pause.png"), for: .normal)
         } else {
             musicPlayer.pause()
             toggleState = 1
-            playBtn.setImage(UIImage(named: "play.png"), for: .normal)
+            playButton.setImage(UIImage(named: "play.png"), for: .normal)
         }
         
     }
@@ -60,8 +63,12 @@ class GenreScreen: UIViewController {
         musicPlayer.skipToNextItem()
         musicPlayer.play()
         
+        
         //Changing Variables
        changeLabels()
+        playButton.setImage(UIImage(named: "pause.png"), for: .normal)
+        toggleState = 2
+        
     }
     
     @IBAction func backButton(_ sender: UIButton) {
@@ -70,6 +77,8 @@ class GenreScreen: UIViewController {
         musicPlayer.play()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
         self.changeLabels()
+           self.playButton.setImage(UIImage(named: "pause.png"), for: .normal)
+            self.toggleState = 2
         }
     }
     
@@ -78,6 +87,21 @@ class GenreScreen: UIViewController {
     MPVolumeView.setVolume(volumeSlider.value)
         print(volumeSlider.value)
     }
+    
+    
+    // Changes the image of the play button
+    func changePlayButton() {
+        if toggleState == 1 {
+             playButton.setImage(UIImage(named: "pause.png"), for: .normal)
+            toggleState = 2
+        } else {
+            playButton.setImage(UIImage(named: "play.png"), for: .normal)
+            toggleState = 1
+        }
+        
+        
+    }
+    
     
     // Changing label values to current song
     func changeLabels() {

@@ -14,6 +14,17 @@
 		6A7354CC21A209DC00ED2186 /* icons_next-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A7354CB21A209DB00ED2186 /* icons_next-512.png */; };
 		6A7354CE21A20B0B00ED2186 /* backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A7354CD21A20B0A00ED2186 /* backbutton.png */; };
 		6A91069C21A4A20D00685DB2 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A91069B21A4A20D00685DB2 /* pause.png */; };
+		6A91069E21A668E300685DB2 /* Pop Back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A91069D21A668E200685DB2 /* Pop Back.jpg */; };
+		6A9106A021A6696900685DB2 /* pexels-photo-255379.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6A91069F21A6696800685DB2 /* pexels-photo-255379.jpeg */; };
+		6A9106A221A669C200685DB2 /* Raggae.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A9106A121A669C100685DB2 /* Raggae.jpg */; };
+		6A9106A421A66A8F00685DB2 /* Rock Back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A9106A321A66A8D00685DB2 /* Rock Back.jpg */; };
+		6A9106A621A66B2700685DB2 /* Hip Hop Back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A9106A521A66B2600685DB2 /* Hip Hop Back.jpg */; };
+		6A9106AA21A66D8900685DB2 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A9106A921A66D8800685DB2 /* 1.jpg */; };
+		6A9106AC21A66F0000685DB2 /* Dance Back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A9106AB21A66EFE00685DB2 /* Dance Back.jpg */; };
+		6A9106AE21A66F4D00685DB2 /* Country Back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A9106AD21A66F4C00685DB2 /* Country Back.jpg */; };
+		6A9106B021A66F9300685DB2 /* EDM Back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A9106AF21A66F9100685DB2 /* EDM Back.jpg */; };
+		6A9106B221A6703A00685DB2 /* EDM Back 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A9106B121A6703900685DB2 /* EDM Back 2.jpg */; };
+		6A9106B421A670FD00685DB2 /* Jazz Back.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6A9106B321A670FB00685DB2 /* Jazz Back.jpeg */; };
 		6AA7CBDE219B43AC00CAF727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7CBDD219B43AC00CAF727 /* AppDelegate.swift */; };
 		6AA7CBE0219B43AC00CAF727 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7CBDF219B43AC00CAF727 /* ViewController.swift */; };
 		6AA7CBE3219B43AC00CAF727 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA7CBE1219B43AC00CAF727 /* Main.storyboard */; };
@@ -31,6 +42,17 @@
 		6A7354CB21A209DB00ED2186 /* icons_next-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons_next-512.png"; sourceTree = "<group>"; };
 		6A7354CD21A20B0A00ED2186 /* backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbutton.png; sourceTree = "<group>"; };
 		6A91069B21A4A20D00685DB2 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		6A91069D21A668E200685DB2 /* Pop Back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pop Back.jpg"; sourceTree = "<group>"; };
+		6A91069F21A6696800685DB2 /* pexels-photo-255379.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pexels-photo-255379.jpeg"; sourceTree = "<group>"; };
+		6A9106A121A669C100685DB2 /* Raggae.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Raggae.jpg; sourceTree = "<group>"; };
+		6A9106A321A66A8D00685DB2 /* Rock Back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Rock Back.jpg"; sourceTree = "<group>"; };
+		6A9106A521A66B2600685DB2 /* Hip Hop Back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Hip Hop Back.jpg"; sourceTree = "<group>"; };
+		6A9106A921A66D8800685DB2 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		6A9106AB21A66EFE00685DB2 /* Dance Back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dance Back.jpg"; sourceTree = "<group>"; };
+		6A9106AD21A66F4C00685DB2 /* Country Back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Country Back.jpg"; sourceTree = "<group>"; };
+		6A9106AF21A66F9100685DB2 /* EDM Back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "EDM Back.jpg"; sourceTree = "<group>"; };
+		6A9106B121A6703900685DB2 /* EDM Back 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "EDM Back 2.jpg"; sourceTree = "<group>"; };
+		6A9106B321A670FB00685DB2 /* Jazz Back.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Jazz Back.jpeg"; sourceTree = "<group>"; };
 		6AA7CBDA219B43AC00CAF727 /* iOS Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA7CBDD219B43AC00CAF727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AA7CBDF219B43AC00CAF727 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +82,18 @@
 				6A7354C721A208AA00ED2186 /* play.png */,
 				6A7354C921A2095500ED2186 /* fast_forward-512.png */,
 				6A7354CB21A209DB00ED2186 /* icons_next-512.png */,
+				6A9106A521A66B2600685DB2 /* Hip Hop Back.jpg */,
+				6A9106B321A670FB00685DB2 /* Jazz Back.jpeg */,
+				6A9106AD21A66F4C00685DB2 /* Country Back.jpg */,
+				6A9106AF21A66F9100685DB2 /* EDM Back.jpg */,
+				6A9106B121A6703900685DB2 /* EDM Back 2.jpg */,
+				6A9106A921A66D8800685DB2 /* 1.jpg */,
 				6A7354CD21A20B0A00ED2186 /* backbutton.png */,
+				6A9106AB21A66EFE00685DB2 /* Dance Back.jpg */,
+				6A9106A121A669C100685DB2 /* Raggae.jpg */,
+				6A9106A321A66A8D00685DB2 /* Rock Back.jpg */,
+				6A91069F21A6696800685DB2 /* pexels-photo-255379.jpeg */,
+				6A91069D21A668E200685DB2 /* Pop Back.jpg */,
 				6A91069B21A4A20D00685DB2 /* pause.png */,
 				6A7354C521A2028200ED2186 /* no-audio.png */,
 			);
@@ -157,16 +190,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A9106A421A66A8F00685DB2 /* Rock Back.jpg in Resources */,
+				6A9106B221A6703A00685DB2 /* EDM Back 2.jpg in Resources */,
+				6A9106A021A6696900685DB2 /* pexels-photo-255379.jpeg in Resources */,
+				6A91069E21A668E300685DB2 /* Pop Back.jpg in Resources */,
 				6AA7CBEB219B43AE00CAF727 /* LaunchScreen.storyboard in Resources */,
+				6A9106AE21A66F4D00685DB2 /* Country Back.jpg in Resources */,
 				6A7354C821A208AA00ED2186 /* play.png in Resources */,
+				6A9106AA21A66D8900685DB2 /* 1.jpg in Resources */,
 				6A91069C21A4A20D00685DB2 /* pause.png in Resources */,
 				6AA7CBE8219B43AE00CAF727 /* Assets.xcassets in Resources */,
+				6A9106B021A66F9300685DB2 /* EDM Back.jpg in Resources */,
+				6A9106A621A66B2700685DB2 /* Hip Hop Back.jpg in Resources */,
 				6A7354CA21A2095500ED2186 /* fast_forward-512.png in Resources */,
 				6A7354CC21A209DC00ED2186 /* icons_next-512.png in Resources */,
 				6A7354C421A2027C00ED2186 /* 3745.png in Resources */,
 				6A7354CE21A20B0B00ED2186 /* backbutton.png in Resources */,
 				6AA7CBE3219B43AC00CAF727 /* Main.storyboard in Resources */,
+				6A9106AC21A66F0000685DB2 /* Dance Back.jpg in Resources */,
 				6A7354C621A2028200ED2186 /* no-audio.png in Resources */,
+				6A9106B421A670FD00685DB2 /* Jazz Back.jpeg in Resources */,
+				6A9106A221A669C200685DB2 /* Raggae.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

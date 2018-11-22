@@ -11,6 +11,8 @@ import MediaPlayer
 
 class ViewController: UIViewController {
 
+    var genre = GenreScreen()
+    
     // Music Controller
     var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
     
@@ -31,6 +33,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playMusic(_ sender: UIButton) {
+        genre.toggleState = 1
         activityIndicator.startAnimating();
         MPMediaLibrary.requestAuthorization { (status) in
             if status == .authorized {
@@ -45,6 +48,7 @@ class ViewController: UIViewController {
     }
     
     func playMusic(genre: String) {
+        
         activityIndicator.isHidden = false
         activityIndicator.startAnimating();
         musicPlayer.stop()
