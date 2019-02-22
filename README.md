@@ -11,4 +11,4 @@ An app that plays music from your Music Library.
 ## Project Demo
 App Loaded                 | Genre Selection           |  Playing Music
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="https://github.com/NolanOfficial/Weather/blob/master/Screenshot%201.png" height="600" width="277">  | <img src="https://github.com/NolanOfficial/Weather/blob/master/Screenshot%202.png" height="600" width="277"> | <img src="https://github.com/NolanOfficial/Weather/blob/master/Screenshot%203.png" height="600" width="277">
+<img src="https://github.com/NolanOfficial/iOS-Music/blob/master/1.jpeg" height="600" width="277">  | <img src="https://github.com/NolanOfficial/iOS-Music/blob/master/2.jpeg" height="600" width="277"> | <img src="https://github.com/NolanOfficial/iOS-Music/blob/master/3.jpeg" height="600" width="277">
