@@ -9,4 +9,6 @@ An app that plays music from your Music Library.
 * Using Media Query and Media Property Predicate to allow for genre selection 
 
 ## Project Demo
-(Coming Soon...)
+App Loaded                 | Genre Selection           |  Playing Music
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://github.com/NolanOfficial/Weather/blob/master/Screenshot%201.png" height="600" width="277">  | <img src="https://github.com/NolanOfficial/Weather/blob/master/Screenshot%202.png" height="600" width="277"> | <img src="https://github.com/NolanOfficial/Weather/blob/master/Screenshot%203.png" height="600" width="277">
